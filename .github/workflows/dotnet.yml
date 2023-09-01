@@ -43,6 +43,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: ASP-app
+          
+            - uses: Azure/login@v1
+    with:
+      creds: '{"clientId":"${{ secrets.a187812f-7bf4-4414-abab-3691e1c8c287 }}","clientSecret":"${{ secrets.qT08Q~uopZ-FTP.CpJJFl397SCJMx7fMMrCKlb0q }}","subscriptionId":"${{ secrets.a21dd5ae-f19b-44f9-85b8-a07ca7b8a57c }}","tenantId":"${{ secrets.ae9ffe14-d4a5-41ea-b86d-d371eb10dad4 }}"}'
+
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
